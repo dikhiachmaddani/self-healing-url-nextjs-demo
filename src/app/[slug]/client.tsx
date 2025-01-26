@@ -12,16 +12,23 @@ interface SlugPageClientProps {
 
 export function SlugPageClient({ slug }: SlugPageClientProps) {
     const { data, isLoading, isError } = UseValidateAlbum(slug);
-    if (isLoading) return <CardSkeleton />;
+    if (isLoading) return (
+        <>
+            <div className="my-10">
+                <h1 className="font-semibold text-2xl mb-4 text-blue-950">Detail Albums</h1>
+                <p>data yang didapatkan berasal dari jsonplaceholder Albums.</p>
+            </div>
+            <CardSkeleton />
+        </>
+    );
     if (isError || !data) notFound();
     return (
-        <div className="col-span-12 md:col-span-6 lg:col-span-3">
-            <div className="border-[1px] border-blue-black p-5">
-                <Link href={Route.ListAlbums} className="mb-5 text-blue-500">Kembali</Link>
-                <div className="mt-2">
-                    <p className="hover:underline">{data.title}</p>
-                </div>
+        <>
+            <div className="my-10">
+                <h1 className="font-semibold text-2xl mb-4 text-blue-950">{data.title}</h1>
+                <p>data yang didapatkan berasal dari jsonplaceholder Albums.</p>
             </div>
-        </div>
+            <Link href={Route.ListAlbums} className="mb-5 text-white bg-blue-950 p-3 rounded-md">Kembali Ke Halaman Utama</Link>
+        </>
     );
 }

@@ -6,6 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "List Albums",
   description: "List Albums",
+  creator: "Dikhi Achmad Dani"
 };
 
 export default function RootLayout({

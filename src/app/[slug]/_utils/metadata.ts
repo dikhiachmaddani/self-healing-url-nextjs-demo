@@ -9,5 +9,6 @@ export function buildMetadata(title: string): Metadata {
             title: title ?? "Album Details",
             description
         },
+        creator: "Dikhi Achmad Dani"
     };
 }
