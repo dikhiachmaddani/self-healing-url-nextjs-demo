@@ -1,8 +1,8 @@
 "use client"
 
 import { useListAlbums } from "@/modules/albums/hook";
-import { FruitCardSkeleton } from "./_components/skeleton/fruit-card-skeleton";
 import { AlbumsCard } from "./_components/card/albums-card";
+import { CardSkeleton } from "./_components/skeleton/card-skeleton";
 
 export default function Home() {
   const { data, isLoading } = useListAlbums();
@@ -12,7 +12,7 @@ export default function Home() {
       <section className="grid grid-cols-12 gap-6 mt-11 p-4">
         {Array(8).fill(null).map((_, index) => (
           <div key={index} className="col-span-12 md:col-span-6 lg:col-span-3">
-            <FruitCardSkeleton />
+            <CardSkeleton />
           </div>
         ))}
       </section>

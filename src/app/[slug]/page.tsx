@@ -1,37 +1,19 @@
-"use client";
+import { Metadata } from 'next';
+import { slugTotitle } from './_utils';
+import { buildMetadata } from './_utils/metadata';
+import { SlugPageClient } from './client';
 
-import { useDetailAlbums } from "@/modules/albums/hook";
-import { notFound, useParams, useRouter } from "next/navigation";
-import slugify from "slugify";
-import { useEffect } from "react";
-import { FruitCardSkeleton } from "@/app/_components/skeleton/fruit-card-skeleton";
-import { Route } from "@/commons/routes";
-import { DetailAlbumsCard } from "../_components/card/detail-albums-card";
+type SlugProps = {
+    params: Promise<{ slug: string }>;
+};
 
-export default function SlugPage() {
-    const { slug } = useParams<{ slug: string }>();
-    const router = useRouter();
-    if (!slug) notFound();
+export async function generateMetadata({ params }: SlugProps): Promise<Metadata> {
+    const { slug } = await params;
+    const title = slugTotitle(slug);
+    return buildMetadata(title);
+}
 
-    const id = slug.split("-").pop()!;
-    const { data, isLoading } = useDetailAlbums(id);
-    useEffect(() => {
-        if (data && slug) {
-            const correctSlug = `${slugify(data.title, { lower: true, trim: true })}-${id}`;
-            if (slug !== correctSlug) {
-                router.replace(Route.SlugAlbums.replace(":slug", correctSlug));
-            }
-        }
-    }, [id, slug, data, router]);
-
-    if (isLoading) return <FruitCardSkeleton />;
-    if (!data) notFound();
-
-    return (
-        <DetailAlbumsCard
-            id={data.id}
-            key={data.id}
-            title={data.title}
-        />
-    );
+export default async function SlugPage({ params }: SlugProps) {
+    const { slug } = await params;
+    return <SlugPageClient slug={slug} />;
 }

@@ -1,4 +1,4 @@
-export function FruitCardSkeleton() {
+export function CardSkeleton() {
     return (
         <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <div className="border-[1px] border-blue-black p-5">

@@ -2,7 +2,7 @@
 
 import { AlbumsKey } from "@/commons/constants/query-key";
 import { useQuery } from "@tanstack/react-query";
-import { getListAlbums, getDetailAlbums } from "./api";
+import { getDetailAlbums, getListAlbums } from "./api";
 
 export const useListAlbums = () => {
     return useQuery({

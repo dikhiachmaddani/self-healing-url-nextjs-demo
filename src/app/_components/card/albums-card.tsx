@@ -1,6 +1,6 @@
+import { titleToSlug } from "@/app/[slug]/_utils";
 import { Route } from "@/commons/routes";
 import { Albums } from "@/modules/albums/type";
-import { titleToSlug } from "@/utils/selft-healing-url";
 import Link from "next/link";
 
 export function AlbumsCard({ id, title }: Omit<Albums, 'userId'>) {

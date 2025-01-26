@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { ReactQueryProvider } from '../components/providers/react-query-provider';
 import { MainLayout } from './_components/layout/main-layout';
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "One Piece Fruit",
-  description: "One Piece Fruit",
+  title: "List Albums",
+  description: "List Albums",
 };
 
 export default function RootLayout({
