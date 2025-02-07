@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center" style="font-size: 30px;margin:0;"><b>Self Healing URL <br /> To maximize SEO on Next JS</br></h1>
 
-## Getting Started
+![Self-Healing URL Example](./public/banner.webp)
 
-First, run the development server:
+<p align="center" style="font-size: 15px;margin:20px 0;">This project was inspired by Medium's blog detail page. In the path section, it contains the title and ID at the end. If you delete the title and leave the ID. Then the URL will return to its original state. For example as below:
+</p>
+
+![Self-Healing URL Example](./public/example-dot-medium.gif)
+
+<p align="center">for details, you can see my article here: <br> <a href="https://medium.com/dot-intern/self-healing-url-untuk-memaksimalkan-seo-pada-next-js-3116d1ec0917">https://medium.com/dot-intern/self-healing-url-untuk-memaksimalkan-seo-pada-next-js-3116d1ec0917</a></p>
+
+<p align="center" style="font-size: 15px;margin:20px 0;">You want to speak English? Translate it yourself xoxo.</p>
+
+## How to run ?
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+
+# then
+
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## The final result was as follows
+![Self-Healing URL Example](./public/result.gif)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Preview: <a href="self-healing-url-nextjs-demo.vercel.app"> self-healing-url-nextjs-demo.vercel.app</a>
