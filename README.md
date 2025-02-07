@@ -24,4 +24,4 @@ pnpm dev
 ## The final result was as follows
 ![Self-Healing URL Example](./public/result.gif)
 
-Preview: <a href="self-healing-url-nextjs-demo.vercel.app"> self-healing-url-nextjs-demo.vercel.app</a>
+Preview: <a href="https://self-healing-url-nextjs-demo.vercel.app"> self-healing-url-nextjs-demo.vercel.app</a>
